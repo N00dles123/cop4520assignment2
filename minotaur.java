@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.*;
 // to simulate a guests turn to go find the cupcake since a guest can go multiple times, we will use random number generation
 //
 public class minotaur {
+    // you can change the number of guests
     public static int numGuests = 10;
     // labrynth will start with 1 cupcake
     public AtomicBoolean cupcakePresent = new AtomicBoolean(true);
