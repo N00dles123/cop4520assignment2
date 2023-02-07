@@ -13,6 +13,11 @@ public class minotaur {
     public static void main(String[] args){
         
     }
+    public static int randomGuest(){
+        Random rand = new Random();
+        int randomNum = rand.nextInt(numGuests);
+        return randomNum;
+    }
 }
 
 class guests implements Runnable{
@@ -23,6 +28,6 @@ class guests implements Runnable{
     minotaur m;
     
     public void run(){
-        
+
     }
 }
