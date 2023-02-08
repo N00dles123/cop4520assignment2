@@ -29,7 +29,7 @@ public class crystalVase {
         }
         long end = System.currentTimeMillis();
         System.out.println("Time: " + (end - start) + "ms");
-        System.out.println(room.visitedGuests.toString());
+        //System.out.println(room.visitedGuests.toString());
         sc.close();
     }
 }
@@ -41,7 +41,7 @@ class Guest implements Runnable{
         this.room = room;
     }
     public void run(){
-        // guest will try to enter the room
+        // guest will try to enter the room will continue running while all guests have not visited the room
         while(room.visitedGuests.size() < crystalVase.numGuests){ 
             try{
                 room.lock.acquire();

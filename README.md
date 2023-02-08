@@ -14,4 +14,4 @@ Experimentally, this protocol should run in factorial time since we are randomly
 In order to test, I changed up the number of guests in 5 separate runs, I tested with 10, 50, 100, 200, and 400 guests.
 The times I got were 14ms, 66ms, 222ms, 1305ms, and 12656ms
 ## Problem 2: Problem 2: Minotaur’s Crystal Vase and proof of correctness
-In this program, 
+In this program, the protocol 
