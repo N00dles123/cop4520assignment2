@@ -11,7 +11,7 @@ public class minotaur {
     public Semaphore lock = new Semaphore(1);
 
     // you can change the number of guests
-    public static int numGuests = 200;
+    public static int numGuests;
     // this will keep track of the total amount of guests that have entered the labrynth
     public int count = 0;
     // labrynth will start with 1 cupcake
@@ -20,11 +20,18 @@ public class minotaur {
     // start with no current guest
     public int curGuest;
     // checking if guests ate cupcakes yet
-    public boolean[] guestEntered = new boolean[numGuests];
+    public boolean[] guestEntered;
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        // ask user how much guests they want to test
+        System.out.println("How many guests do you want to test?");
+        numGuests = Integer.parseInt(sc.nextLine());
         long start = System.currentTimeMillis();
         minotaur labrynth = new minotaur();
+        
+        sc.close();
         // create a thread for each guest
+        labrynth.guestEntered = new boolean[numGuests];
         Thread[] guests = new Thread[numGuests];
         guests[0] = new Thread(new cupcake(labrynth));
         for(int i = 1; i < numGuests; i++){
