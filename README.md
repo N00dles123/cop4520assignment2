@@ -13,7 +13,7 @@ Once every thread has been called upon once, and has had an opportunity to get a
 Experimentally, this protocol should run in factorial time since we are randomly choosing a thread each time to visit the labrynth <br/>
 In order to test, I changed up the number of guests in 5 separate runs, I tested with 10, 50, 100, 200, and 400 guests. <br/>
 The times I got were 14ms, 66ms, 222ms, 1305ms, and 12656ms. The timer starts after you choose the number of guests. <br/>
-## Problem 2: Problem 2: Minotaur’s Crystal Vase and proof of correctness
+## Problem 2: Minotaur’s Crystal Vase and proof of correctness
 In this program, the protocol is to make use of a global boolean to see whether the room is available or busy and to have each thread continually check the room to see if the room is available and if not another thread may show up and "go" in the room once its available. All threads will continue this until every guest has had one chance of going in the room and then the program will terminate. <br/>
 The second strategy works best because of how simple it is by basically using a global boolean to check whether the room is open. The other strategies would involve using either a queue or a complex way of managing who gets in the door. The second strategy is also a better version of the first where the first doesn't have a sign so that the guests cant tell whether the room is available or not. The second strategy can also ensure that the guests do not visit the room twice in order to quickly ensure that all guests can admire the crystal once.  <br/>
 In order to test this, I used 10, 50, 100, 200, and 400 guests. <br/>
