@@ -107,7 +107,8 @@ class cupcake implements Runnable{
         while(m.count < minotaur.numGuests){
             try{
                 m.lock.acquire();
-                if(m.curGuest == 0){
+                int curGuest = m.curGuest;
+                if(curGuest == 0){
                     // cupcake is unavailable so we have to replace
                     if(m.cupcakePresent == false){
                         m.cupcakePresent = true;
