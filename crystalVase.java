@@ -51,6 +51,8 @@ class Guest implements Runnable{
                     room.roomAvailable = false;
                     // guest will look at the vase and make the room unavailable
                     System.out.println("Guest " + (id + 1) + " is looking at the vase.");
+                    // you can uncomment the following line to simulate 100ms of time for guest to look at the vase
+                    //Thread.sleep(100);
                     // guest will leave the room
                     room.visitedGuests.add(id);
                     room.roomAvailable = true;
